@@ -3,7 +3,7 @@
 	android:id="@+id/textView"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:textColor="@color/black"
-	android:textSize="@dimen/text_size_large"
-	android:padding="16dp"
+	android:textColor="@color/text_color"
+	android:textSize="@dimen/large_text_size"
+	android:padding="@dimen/normal_padding"
 />
