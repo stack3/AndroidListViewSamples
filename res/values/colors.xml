@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="lavendar">#E6E6FA</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent50">#88000000</color>
+    <color name="transparent25">#44000000</color>
+        
+    <color name="normalText">#111111</color>
+    <color name="normalBackground">#ffffff</color>
+    <color name="backgroundStrong">#cc0033</color>
+    <color name="backgroundDark">#990000</color>
+    <color name="backgroundHighlight">#FF9933</color>
+    <color name="backgroundWeak">#FFDEAD</color>
+    <color name="textStrong">#c60850</color>
+    <color name="textLighter">#ff0033</color>
+        
+    <color name="username">@color/textStrong</color>
+
+    <color name="link">@color/textStrong</color>
+        
+    <color name="headerTitle">#ffffff</color>
+    <color name="headerTitleBackground">@color/backgroundStrong</color>
+	<color name="sectionHeaderBackground">@color/backgroundStrong</color>
+    <color name="footerBarBackground">@color/backgroundStrong</color>
+    <color name="streamFooterBarBackground">@color/backgroundWeak</color>
+    
+    <color name="streamBackground">@color/backgroundDark</color>
+    <color name="streamLinkBackground">@color/lavendar</color>
+    <color name="unreadNotificationBackground">@color/backgroundHighlight</color>
+</resources>
