@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import net.stack3.listviewsample.customlistitem.CustomListItemActivity;
 import net.stack3.listviewsample.listactivity.MyListActivity;
+import net.stack3.listviewsample.multiplelistitemtype.MultipleListItemTypeActivity;
 import net.stack3.listviewsample.simplelistview.SimpleListViewActivity;
 
 import android.os.Bundle;
@@ -37,6 +38,11 @@ public class MainActivity extends ListActivity {
 		item = new MenuItem();
 		item.setTitle("ListActivity");
 		item.setActivityClass(MyListActivity.class);
+		items.add(item);
+
+		item = new MenuItem();
+		item.setTitle("MultipleListItemType");
+		item.setActivityClass(MultipleListItemTypeActivity.class);
 		items.add(item);
 		
 		ArrayAdapter<MenuItem> adapter = new ArrayAdapter<MenuItem>(this, android.R.layout.simple_list_item_1, items);

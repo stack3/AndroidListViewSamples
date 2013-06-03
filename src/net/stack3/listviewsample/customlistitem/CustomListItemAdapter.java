@@ -3,6 +3,7 @@ package net.stack3.listviewsample.customlistitem;
 import java.util.List;
 
 import net.stack3.listviewsample.R;
+import net.stack3.listviewsample.model.CustomListItem;
 
 import android.content.Context;
 import android.util.Log;

@@ -3,8 +3,8 @@ package net.stack3.listviewsample.listactivity;
 import java.util.ArrayList;
 
 import net.stack3.listviewsample.R;
-import net.stack3.listviewsample.customlistitem.CustomListItem;
 import net.stack3.listviewsample.customlistitem.CustomListItemAdapter;
+import net.stack3.listviewsample.model.CustomListItem;
 import android.app.ListActivity;
 import android.os.Bundle;
 
