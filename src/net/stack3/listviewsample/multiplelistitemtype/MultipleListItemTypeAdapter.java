@@ -1,5 +1,6 @@
 package net.stack3.listviewsample.multiplelistitemtype;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import net.stack3.listviewsample.R;
@@ -18,15 +19,14 @@ public class MultipleListItemTypeAdapter extends BaseAdapter {
 
 	private Context context;
 	private List<BaseCustomListItem> items;
-	private Class<?>[] viewTypes; 
+	private List<Object> viewTypes;
 	
 	public MultipleListItemTypeAdapter(Context context, List<BaseCustomListItem> items) {
 		this.context = context;
 		this.items = items;
-		this.viewTypes = new Class<?>[] {
-			CustomListItem.class,
-			CustomListItem2.class
-		};
+		this.viewTypes = new ArrayList<Object>();
+		this.viewTypes.add(CustomListItem.class);
+		this.viewTypes.add(CustomListItem2.class);
 	}
 	
 	@Override
@@ -86,18 +86,12 @@ public class MultipleListItemTypeAdapter extends BaseAdapter {
 
 	@Override
 	public int getViewTypeCount() {
-		return viewTypes.length;
+		return viewTypes.size();
 	}
 	
 	@Override
 	public int getItemViewType(int position) {
 		BaseCustomListItem item = (BaseCustomListItem)items.get(position);
-		for (int i = 0; i < viewTypes.length; i++) {
-			Class<?> viewType = viewTypes[i];
-			if (viewType == item.getClass()) {
-				return i;
-			}
-		}
-		return -1;
+		return viewTypes.indexOf(item.getClass());
 	}
 }
