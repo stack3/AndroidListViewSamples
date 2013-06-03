@@ -27,7 +27,7 @@ public class MainActivity extends ListActivity {
 		item.setActivityClass(SimpleListViewActivity.class);
 		items.add(item);
 		
-		ArrayAdapter<MenuItem> adapter = new ArrayAdapter<MenuItem>(this, R.layout.main_activity_list_item, R.id.textView, items);
+		ArrayAdapter<MenuItem> adapter = new ArrayAdapter<MenuItem>(this, android.R.layout.simple_list_item_1, items);
 		setListAdapter(adapter);
 	}
 	
