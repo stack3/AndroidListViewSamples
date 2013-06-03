@@ -12,7 +12,7 @@ public class MyListActivity extends ListActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.my_list_activity);
+		setContentView(R.layout.common_list_activity);
 		
 		ArrayList<CustomListItem> items = new ArrayList<CustomListItem>();
 		for (int i = 0; i < 100; i++) {

@@ -12,7 +12,7 @@ public class SimpleListViewActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.simple_list_view_activity);
+		setContentView(R.layout.common_list_view_activity);
 		
 		ListView listView = (ListView)findViewById(R.id.listView);
 		
