@@ -1,4 +1,4 @@
-package net.stack3.listviewsample.customitem;
+package net.stack3.listviewsample.customlistitem;
 
 import java.util.List;
 
@@ -12,11 +12,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-public class CustomItemAdapter extends BaseAdapter {
+public class CustomListItemAdapter extends BaseAdapter {
 	private Context context;
-	private List<CustomItem> items;
+	private List<CustomListItem> items;
 	
-	public CustomItemAdapter(Context context, List<CustomItem> items) {
+	public CustomListItemAdapter(Context context, List<CustomListItem> items) {
 		this.context = context;
 		this.items = items;
 	}
@@ -41,7 +41,7 @@ public class CustomItemAdapter extends BaseAdapter {
 		View customItemView = null; 
 		if (convertView == null) {
 			LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			customItemView = inflater.inflate(R.layout.custom_item_activity_item, parent, false);
+			customItemView = inflater.inflate(R.layout.custom_list_item, parent, false);
 			Log.d(this.getClass().getName(), "created");
 		} else {
 			customItemView = convertView;
@@ -51,7 +51,7 @@ public class CustomItemAdapter extends BaseAdapter {
 		TextView titleTextView = (TextView)customItemView.findViewById(R.id.titleTextView);
 		TextView descriptionTextView = (TextView)customItemView.findViewById(R.id.descriptionTextView);
 		
-		CustomItem item = items.get(position);
+		CustomListItem item = items.get(position);
 		titleTextView.setText(item.getTitle());
 		descriptionTextView.setText(item.getDescription());
 		

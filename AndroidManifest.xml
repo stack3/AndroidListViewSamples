@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".simplelistview.SimpleListViewActivity"></activity>
-        <activity android:name=".customitem.CustomItemActivity"></activity>
+        <activity android:name=".customlistitem.CustomListItemActivity"></activity>
         <activity android:name=".listactivity.MyListActivity"></activity>
     </application>
 

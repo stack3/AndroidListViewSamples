@@ -2,7 +2,7 @@ package net.stack3.listviewsample;
 
 import java.util.ArrayList;
 
-import net.stack3.listviewsample.customitem.CustomItemActivity;
+import net.stack3.listviewsample.customlistitem.CustomListItemActivity;
 import net.stack3.listviewsample.listactivity.MyListActivity;
 import net.stack3.listviewsample.simplelistview.SimpleListViewActivity;
 
@@ -31,7 +31,7 @@ public class MainActivity extends ListActivity {
 
 		item = new MenuItem();
 		item.setTitle("CustomItem");
-		item.setActivityClass(CustomItemActivity.class);
+		item.setActivityClass(CustomListItemActivity.class);
 		items.add(item);
 
 		item = new MenuItem();

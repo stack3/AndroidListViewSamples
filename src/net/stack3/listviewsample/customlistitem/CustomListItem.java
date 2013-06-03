@@ -1,6 +1,6 @@
-package net.stack3.listviewsample.customitem;
+package net.stack3.listviewsample.customlistitem;
 
-public class CustomItem {
+public class CustomListItem {
 	private String title;
 	private String description;
 	

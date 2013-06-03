@@ -21,7 +21,7 @@ public class SimpleListViewActivity extends Activity {
 			items.add(String.format("Item %d", i));
 		}
 		
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.simple_list_view_activity_list_item, R.id.textView, items);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.simple_list_item, R.id.textView, items);
 		//ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.simple_list_view_activity_list_item, items);
 		listView.setAdapter(adapter);
 	}
