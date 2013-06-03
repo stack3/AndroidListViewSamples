@@ -1,7 +1,5 @@
 package net.stack3.listviewsample;
 
-import android.app.Activity;
-
 public class MenuItem {
 	private String title;
 	private Class<?> activityClass;

@@ -1,6 +1,5 @@
 package net.stack3.listviewsample.customitem;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import net.stack3.listviewsample.R;
