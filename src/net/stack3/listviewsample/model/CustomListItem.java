@@ -1,7 +1,5 @@
 package net.stack3.listviewsample.model;
 
-import net.stack3.listviewsample.R;
-
 public class CustomListItem implements BaseCustomListItem {
 	private String title;
 	private String description;

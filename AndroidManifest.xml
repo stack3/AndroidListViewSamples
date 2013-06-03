@@ -24,7 +24,7 @@
         </activity>
         <activity android:name=".simplelistview.SimpleListViewActivity"></activity>
         <activity android:name=".customlistitem.CustomListItemActivity"></activity>
-        <activity android:name=".listactivity.MyListActivity"></activity>
+        <activity android:name=".simplelistactivity.SimpleListActivity"></activity>
         <activity android:name=".multiplelistitemtype.MultipleListItemTypeActivity"></activity>
     </application>
 

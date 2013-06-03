@@ -3,8 +3,8 @@ package net.stack3.listviewsample;
 import java.util.ArrayList;
 
 import net.stack3.listviewsample.customlistitem.CustomListItemActivity;
-import net.stack3.listviewsample.listactivity.MyListActivity;
 import net.stack3.listviewsample.multiplelistitemtype.MultipleListItemTypeActivity;
+import net.stack3.listviewsample.simplelistactivity.SimpleListActivity;
 import net.stack3.listviewsample.simplelistview.SimpleListViewActivity;
 
 import android.os.Bundle;
@@ -25,6 +25,12 @@ public class MainActivity extends ListActivity {
 		items = new ArrayList<MenuItem>();
 		
 		MenuItem item;
+
+		item = new MenuItem();
+		item.setTitle("SimpleListActivity");
+		item.setActivityClass(SimpleListActivity.class);
+		items.add(item);		
+		
 		item = new MenuItem();
 		item.setTitle("SimpleListView");
 		item.setActivityClass(SimpleListViewActivity.class);
@@ -33,11 +39,6 @@ public class MainActivity extends ListActivity {
 		item = new MenuItem();
 		item.setTitle("CustomItem");
 		item.setActivityClass(CustomListItemActivity.class);
-		items.add(item);
-
-		item = new MenuItem();
-		item.setTitle("ListActivity");
-		item.setActivityClass(MyListActivity.class);
 		items.add(item);
 
 		item = new MenuItem();
