@@ -10,22 +10,22 @@ import android.widget.ListView;
 
 public class CustomListItemActivity extends Activity {
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.common_list_view_activity);
-		setTitle("CustomListItem");
-		
-		ArrayList<CustomListItem> items = new ArrayList<CustomListItem>();
-		for (int i = 0; i < 100; i++) {
-			CustomListItem item = new CustomListItem();
-			item.setTitle(String.format("Item %d", i));
-			item.setDescription(String.format("Description %d", i));
-			items.add(item);
-		}
-		
-		CustomListItemAdapter adapter = new CustomListItemAdapter(this, items);
-		ListView listView = (ListView)findViewById(R.id.listView);
-		listView.setAdapter(adapter);
-	}
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.common_list_view_activity);
+        setTitle("CustomListItem");
+        
+        ArrayList<CustomListItem> items = new ArrayList<CustomListItem>();
+        for (int i = 0; i < 100; i++) {
+            CustomListItem item = new CustomListItem();
+            item.setTitle(String.format("Item %d", i));
+            item.setDescription(String.format("Description %d", i));
+            items.add(item);
+        }
+        
+        CustomListItemAdapter adapter = new CustomListItemAdapter(this, items);
+        ListView listView = (ListView)findViewById(R.id.listView);
+        listView.setAdapter(adapter);
+    }
 }
