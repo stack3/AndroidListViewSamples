@@ -13,10 +13,8 @@ public class CustomListItemActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
 		setContentView(R.layout.common_list_view_activity);
-		
-		ListView listView = (ListView)findViewById(R.id.listView);
+		setTitle("CustomListItem");
 		
 		ArrayList<CustomListItem> items = new ArrayList<CustomListItem>();
 		for (int i = 0; i < 100; i++) {
@@ -27,6 +25,7 @@ public class CustomListItemActivity extends Activity {
 		}
 		
 		CustomListItemAdapter adapter = new CustomListItemAdapter(this, items);
+		ListView listView = (ListView)findViewById(R.id.listView);
 		listView.setAdapter(adapter);
 	}
 }

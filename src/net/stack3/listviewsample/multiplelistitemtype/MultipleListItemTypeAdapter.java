@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.stack3.listviewsample.R;
-import net.stack3.listviewsample.model.BaseCustomListItem;
 import net.stack3.listviewsample.model.CustomListItem;
 import net.stack3.listviewsample.model.CustomListItem2;
 import android.content.Context;
@@ -18,10 +17,10 @@ import android.widget.TextView;
 public class MultipleListItemTypeAdapter extends BaseAdapter {
 
 	private Context context;
-	private List<BaseCustomListItem> items;
+	private List<Object> items;
 	private List<Object> viewTypes;
 	
-	public MultipleListItemTypeAdapter(Context context, List<BaseCustomListItem> items) {
+	public MultipleListItemTypeAdapter(Context context, List<Object> items) {
 		this.context = context;
 		this.items = items;
 		this.viewTypes = new ArrayList<Object>();
@@ -48,7 +47,7 @@ public class MultipleListItemTypeAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View customItemView = null; 
 		
-		BaseCustomListItem baseItem = (BaseCustomListItem)items.get(position);
+		Object baseItem = items.get(position);
 		if (baseItem instanceof CustomListItem) {
 			if (convertView == null) {
 				LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -91,7 +90,7 @@ public class MultipleListItemTypeAdapter extends BaseAdapter {
 	
 	@Override
 	public int getItemViewType(int position) {
-		BaseCustomListItem item = (BaseCustomListItem)items.get(position);
+		Object item = items.get(position);
 		return viewTypes.indexOf(item.getClass());
 	}
 }

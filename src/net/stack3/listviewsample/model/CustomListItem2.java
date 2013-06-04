@@ -1,6 +1,6 @@
 package net.stack3.listviewsample.model;
 
-public class CustomListItem2 implements BaseCustomListItem {
+public class CustomListItem2 {
 	private String leftText;
 	private String rightText;
 	
@@ -18,10 +18,5 @@ public class CustomListItem2 implements BaseCustomListItem {
 	
 	public void setRightText(String rightText) {
 		this.rightText = rightText;
-	}
-	
-	@Override
-	public int getViewType() {
-		return 1;
 	}
 }

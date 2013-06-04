@@ -43,7 +43,7 @@ public class MainActivity extends ListActivity {
 		items.add(item);
 		
 		item = new MenuItem();
-		item.setTitle("CustomItem");
+		item.setTitle("CustomListItem");
 		item.setActivityClass(CustomListItemActivity.class);
 		items.add(item);
 

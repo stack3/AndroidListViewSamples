@@ -1,6 +1,6 @@
 package net.stack3.listviewsample.model;
 
-public class CustomListItem implements BaseCustomListItem {
+public class CustomListItem {
 	private String title;
 	private String description;
 	
@@ -18,10 +18,5 @@ public class CustomListItem implements BaseCustomListItem {
 	
 	public void setDescription(String description) {
 		this.description = description;
-	}
-	
-	@Override
-	public int getViewType() {
-		return 0;
 	}
 }

@@ -3,7 +3,6 @@ package net.stack3.listviewsample.multiplelistitemtype;
 import java.util.ArrayList;
 
 import net.stack3.listviewsample.R;
-import net.stack3.listviewsample.model.BaseCustomListItem;
 import net.stack3.listviewsample.model.CustomListItem;
 import net.stack3.listviewsample.model.CustomListItem2;
 import android.app.Activity;
@@ -15,10 +14,9 @@ public class MultipleListItemTypeActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.common_list_view_activity);
+		setTitle("MultipleListItemType");
 		
-		ListView listView = (ListView)findViewById(R.id.listView);
-		
-		ArrayList<BaseCustomListItem> items = new ArrayList<BaseCustomListItem>();
+		ArrayList<Object> items = new ArrayList<Object>();
 		for (int i = 0; i < 100; i++) {
 			if (i % 2 == 0) {
 				CustomListItem item = new CustomListItem();
@@ -34,6 +32,7 @@ public class MultipleListItemTypeActivity extends Activity {
 		}
 				
 		MultipleListItemTypeAdapter adapter = new MultipleListItemTypeAdapter(this, items);
+		ListView listView = (ListView)findViewById(R.id.listView);
 		listView.setAdapter(adapter);
 	}
 }

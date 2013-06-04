@@ -22,7 +22,7 @@ public class CustomTextActivity extends Activity {
 			items.add(String.format("Item %d", i));
 		}
 		
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.custom_text_list_item, R.id.textView, items);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.custom_text_list_item, items);
 		listView.setAdapter(adapter);
 	}
 }
