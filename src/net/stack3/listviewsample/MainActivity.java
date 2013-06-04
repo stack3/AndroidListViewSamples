@@ -3,6 +3,7 @@ package net.stack3.listviewsample;
 import java.util.ArrayList;
 
 import net.stack3.listviewsample.customlistitem.CustomListItemActivity;
+import net.stack3.listviewsample.customtext.CustomTextActivity;
 import net.stack3.listviewsample.multiplelistitemtype.MultipleListItemTypeActivity;
 import net.stack3.listviewsample.simplelistactivity.SimpleListActivity;
 import net.stack3.listviewsample.simplelistview.SimpleListViewActivity;
@@ -36,6 +37,11 @@ public class MainActivity extends ListActivity {
 		item.setActivityClass(SimpleListViewActivity.class);
 		items.add(item);
 
+		item = new MenuItem();
+		item.setTitle("CustomText");
+		item.setActivityClass(CustomTextActivity.class);
+		items.add(item);
+		
 		item = new MenuItem();
 		item.setTitle("CustomItem");
 		item.setActivityClass(CustomListItemActivity.class);

@@ -1,4 +1,4 @@
-package net.stack3.listviewsample.simplelistview;
+package net.stack3.listviewsample.customtext;
 
 import java.util.ArrayList;
 
@@ -8,12 +8,12 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class SimpleListViewActivity extends Activity {
+public class CustomTextActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.common_list_view_activity);
-		setTitle("SimpleListView");
+		setTitle("CustomText");
 		
 		ListView listView = (ListView)findViewById(R.id.listView);
 		
@@ -22,7 +22,7 @@ public class SimpleListViewActivity extends Activity {
 			items.add(String.format("Item %d", i));
 		}
 		
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.custom_text_list_item, R.id.textView, items);
 		listView.setAdapter(adapter);
 	}
 }
