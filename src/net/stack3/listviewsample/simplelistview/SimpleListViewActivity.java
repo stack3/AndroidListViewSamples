@@ -15,14 +15,13 @@ public class SimpleListViewActivity extends Activity {
 		setContentView(R.layout.common_list_view_activity);
 		setTitle("SimpleListView");
 		
-		ListView listView = (ListView)findViewById(R.id.listView);
-		
 		ArrayList<String> items = new ArrayList<String>();
 		for (int i = 0; i < 100; i++) {
 			items.add(String.format("Item %d", i));
 		}
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+		ListView listView = (ListView)findViewById(R.id.listView);
 		listView.setAdapter(adapter);
 	}
 }

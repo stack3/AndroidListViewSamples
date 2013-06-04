@@ -19,6 +19,6 @@ public class SimpleListActivity extends ListActivity {
 			items.add(String.format("Item %d", i));
 		}		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
-		setListAdapter(adapter);	
+		setListAdapter(adapter);
 	}
 }

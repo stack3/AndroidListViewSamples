@@ -4,6 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
     <TextView
         android:id="@android:id/empty"
         android:layout_width="wrap_content"
@@ -11,11 +16,5 @@
         android:padding="@dimen/normal_padding"
         android:textSize="@dimen/large_text_size"
         android:text="@string/empty" />
-
-    <ListView
-        android:id="@android:id/list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
-
+    
 </LinearLayout>
