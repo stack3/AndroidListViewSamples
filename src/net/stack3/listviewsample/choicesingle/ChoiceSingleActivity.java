@@ -7,8 +7,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
@@ -18,7 +20,7 @@ public class ChoiceSingleActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.choice_single_activity2);
+        setContentView(R.layout.choice_single_activity);
         setTitle("ChoiceSingle");
         
         ArrayList<String> items = new ArrayList<String>();
@@ -31,13 +33,26 @@ public class ChoiceSingleActivity extends Activity {
         ListView listView = (ListView)findViewById(R.id.listView);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(listViewOnItemClickListener);
+        
+        Button infoButton = (Button)findViewById(R.id.infoButton);
+        infoButton.setOnClickListener(infoButtonOnClickListener);
     }
     
     private OnItemClickListener listViewOnItemClickListener = new OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
             ListView listView = (ListView)findViewById(R.id.listView);
-            Log.d("", String.format("position:%d", listView.getCheckedItemPosition()));
+            Log.d("", String.format("checked position:%d", listView.getCheckedItemPosition()));
+            Log.d("", String.format("selected position:%d", listView.getSelectedItemPosition()));
+        }
+    };
+    
+    private OnClickListener infoButtonOnClickListener = new OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            ListView listView = (ListView)findViewById(R.id.listView);
+            Log.d("", String.format("checked position:%d", listView.getCheckedItemPosition()));
+            Log.d("", String.format("selected position:%d", listView.getSelectedItemPosition()));
         }
     };
 }
