@@ -10,12 +10,11 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
 public class ChoiceSingleActivity extends Activity {
-    private ArrayAdapter<String> adapter;
+    private ChoiceSingleListItemAdapter adapter;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,7 @@ public class ChoiceSingleActivity extends Activity {
         items.add("Item 2");
         items.add("Item 3");
         
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+        adapter = new ChoiceSingleListItemAdapter(this, items);
         
         ListView listView = (ListView)findViewById(R.id.listView);
         listView.setAdapter(adapter);
@@ -45,6 +44,8 @@ public class ChoiceSingleActivity extends Activity {
     private OnItemClickListener listViewOnItemClickListener = new OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+            adapter.notifyDataSetChanged();
+            
             ListView listView = (ListView)findViewById(R.id.listView);
             Log.d("", String.format("position:%d", listView.getCheckedItemPosition()));
         }
@@ -71,6 +72,8 @@ public class ChoiceSingleActivity extends Activity {
             if (position >= 0) {
                 String item = adapter.getItem(position);
                 adapter.remove(item);
+                // 削除したpositionのチェックを外す。これをしないと範囲外のものがチェックされたままになりうる。
+                listView.setItemChecked(position, false);
             }
         }
     };    
