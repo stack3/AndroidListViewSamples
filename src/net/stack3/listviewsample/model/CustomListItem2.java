@@ -19,4 +19,9 @@ public class CustomListItem2 {
     public void setRightText(String rightText) {
         this.rightText = rightText;
     }
+    
+    @Override
+    public String toString() {
+        return String.format("leftText:%s rightText:%s", leftText, rightText);
+    }    
 }

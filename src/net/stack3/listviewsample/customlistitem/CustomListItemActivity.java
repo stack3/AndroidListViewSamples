@@ -6,6 +6,9 @@ import net.stack3.listviewsample.R;
 import net.stack3.listviewsample.model.CustomListItem;
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class CustomListItemActivity extends Activity {
@@ -27,5 +30,14 @@ public class CustomListItemActivity extends Activity {
         CustomListItemAdapter adapter = new CustomListItemAdapter(this, items);
         ListView listView = (ListView)findViewById(R.id.listView);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(onItemClickListener);
     }
+    
+    private AdapterView.OnItemClickListener onItemClickListener = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            CustomListItem item = (CustomListItem)parent.getAdapter().getItem(position);
+            Log.d(getClass().getName(), item.toString());
+        }
+    };
 }

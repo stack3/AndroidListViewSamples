@@ -19,4 +19,9 @@ public class CustomListItem {
     public void setDescription(String description) {
         this.description = description;
     }
+    
+    @Override
+    public String toString() {
+        return String.format("title:%s description:%s", title, description);
+    }
 }
