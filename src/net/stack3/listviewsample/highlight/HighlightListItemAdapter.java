@@ -1,4 +1,4 @@
-package net.stack3.listviewsample.choicesingle;
+package net.stack3.listviewsample.highlight;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ChoiceSingleListItemAdapter extends ArrayAdapter<String> {
-    public ChoiceSingleListItemAdapter(Context context, List<String> items) {
+public class HighlightListItemAdapter extends ArrayAdapter<String> {
+    public HighlightListItemAdapter(Context context, List<String> items) {
         // 第2引数の行のresource IDはここでは0でも良い。getViewでresourceを指定してViewを生成するので。
         super(context, 0, items);
     }
@@ -25,7 +25,7 @@ public class ChoiceSingleListItemAdapter extends ArrayAdapter<String> {
         
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.choice_single_list_item,  parent, false); 
+            convertView = inflater.inflate(R.layout.highlight_list_item,  parent, false); 
         }
         
         String item = getItem(position);
@@ -40,7 +40,7 @@ public class ChoiceSingleListItemAdapter extends ArrayAdapter<String> {
         } else {
             convertView.setBackgroundColor(resources.getColor(R.color.white));
         }
-        
+
         return convertView;
     }
 }

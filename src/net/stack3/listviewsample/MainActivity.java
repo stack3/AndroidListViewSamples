@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import net.stack3.listviewsample.choicesingle.ChoiceSingleActivity;
 import net.stack3.listviewsample.customlistitem.CustomListItemActivity;
 import net.stack3.listviewsample.customtext.CustomTextActivity;
+import net.stack3.listviewsample.highlight.HighlightActivity;
 import net.stack3.listviewsample.multipletype.MultipleTypeActivity;
 import net.stack3.listviewsample.simplelistactivity.SimpleListActivity;
 import net.stack3.listviewsample.simplelistview.SimpleListViewActivity;
@@ -58,6 +59,11 @@ public class MainActivity extends ListActivity {
         item.setActivityClass(ChoiceSingleActivity.class);
         items.add(item);
         
+        item = new MenuItem();
+        item.setTitle("Highlight");
+        item.setActivityClass(HighlightActivity.class);
+        items.add(item);
+
         ArrayAdapter<MenuItem> adapter = new ArrayAdapter<MenuItem>(this, android.R.layout.simple_list_item_1, items);
         setListAdapter(adapter);
     }
