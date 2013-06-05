@@ -2,6 +2,7 @@ package net.stack3.listviewsample;
 
 import java.util.ArrayList;
 
+import net.stack3.listviewsample.choicesingle.ChoiceSingleActivity;
 import net.stack3.listviewsample.customlistitem.CustomListItemActivity;
 import net.stack3.listviewsample.customtext.CustomTextActivity;
 import net.stack3.listviewsample.multipletype.MultipleTypeActivity;
@@ -50,6 +51,11 @@ public class MainActivity extends ListActivity {
         item = new MenuItem();
         item.setTitle("MultipleType");
         item.setActivityClass(MultipleTypeActivity.class);
+        items.add(item);
+        
+        item = new MenuItem();
+        item.setTitle("ChoiceSingle");
+        item.setActivityClass(ChoiceSingleActivity.class);
         items.add(item);
         
         ArrayAdapter<MenuItem> adapter = new ArrayAdapter<MenuItem>(this, android.R.layout.simple_list_item_1, items);
