@@ -1,4 +1,4 @@
-package net.stack3.listviewsample.multiplelistitemtype;
+package net.stack3.listviewsample.multipletype;
 
 import java.util.ArrayList;
 
@@ -9,12 +9,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-public class MultipleListItemTypeActivity extends Activity {
+public class MultipleTypeActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.common_list_view_activity);
-        setTitle("MultipleListItemType");
+        setTitle("MultipleType");
 
         ArrayList<Object> items = new ArrayList<Object>();
         for (int i = 0; i < 100; i++) {
@@ -31,7 +31,7 @@ public class MultipleListItemTypeActivity extends Activity {
             }
         }
 
-        MultipleListItemTypeAdapter adapter = new MultipleListItemTypeAdapter(this, items);
+        MultipleTypeAdapter adapter = new MultipleTypeAdapter(this, items);
         ListView listView = (ListView)findViewById(R.id.listView);
         listView.setAdapter(adapter);
     }

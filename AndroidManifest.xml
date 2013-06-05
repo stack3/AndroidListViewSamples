@@ -25,7 +25,7 @@
         <activity android:name=".simplelistview.SimpleListViewActivity"></activity>
         <activity android:name=".customlistitem.CustomListItemActivity"></activity>
         <activity android:name=".simplelistactivity.SimpleListActivity"></activity>
-        <activity android:name=".multiplelistitemtype.MultipleListItemTypeActivity"></activity>
+        <activity android:name="net.stack3.listviewsample.multipletype.MultipleTypeActivity"></activity>
         <activity android:name=".customtext.CustomTextActivity"></activity>
     </application>
 

@@ -1,4 +1,4 @@
-package net.stack3.listviewsample.multiplelistitemtype;
+package net.stack3.listviewsample.multipletype;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,13 +14,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-public class MultipleListItemTypeAdapter extends BaseAdapter {
+public class MultipleTypeAdapter extends BaseAdapter {
 
     private Context context;
     private List<Object> items;
     private List<Object> viewTypes;
 
-    public MultipleListItemTypeAdapter(Context context, List<Object> items) {
+    public MultipleTypeAdapter(Context context, List<Object> items) {
         this.context = context;
         this.items = items;
         this.viewTypes = new ArrayList<Object>();
