@@ -32,6 +32,7 @@ public class ChoiceSingleActivity extends Activity {
         
         ListView listView = (ListView)findViewById(R.id.listView);
         listView.setAdapter(adapter);
+        listView.setItemChecked(0, true);
         listView.setOnItemClickListener(listViewOnItemClickListener);
         
         Button infoButton = (Button)findViewById(R.id.infoButton);
@@ -42,8 +43,7 @@ public class ChoiceSingleActivity extends Activity {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
             ListView listView = (ListView)findViewById(R.id.listView);
-            Log.d("", String.format("checked position:%d", listView.getCheckedItemPosition()));
-            Log.d("", String.format("selected position:%d", listView.getSelectedItemPosition()));
+            Log.d("", String.format("Checked position:%d", listView.getCheckedItemPosition()));
         }
     };
     
@@ -51,8 +51,7 @@ public class ChoiceSingleActivity extends Activity {
         @Override
         public void onClick(View v) {
             ListView listView = (ListView)findViewById(R.id.listView);
-            Log.d("", String.format("checked position:%d", listView.getCheckedItemPosition()));
-            Log.d("", String.format("selected position:%d", listView.getSelectedItemPosition()));
+            Log.d("", String.format("Checked position:%d", listView.getCheckedItemPosition()));
         }
     };
 }
