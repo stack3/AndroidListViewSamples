@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 public class ChoiceSingleListItemAdapter extends ArrayAdapter<String> {
     public ChoiceSingleListItemAdapter(Context context, List<String> items) {
+        // 第2引数の行のresource IDはここでは0でも良い。getViewでresourceを指定してViewを生成するので。
         super(context, 0, items);
     }
     
