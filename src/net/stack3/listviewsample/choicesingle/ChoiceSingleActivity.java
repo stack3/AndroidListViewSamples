@@ -20,8 +20,8 @@ public class ChoiceSingleActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.edit_item_activity);
-        setTitle("EditItem");
+        setContentView(R.layout.choice_single_activity);
+        setTitle("ChoiceSingle");
         
         ArrayList<String> items = new ArrayList<String>();
         items.add("Item 1");
@@ -46,12 +46,6 @@ public class ChoiceSingleActivity extends Activity {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
             ListView listView = (ListView)findViewById(R.id.listView);
-            int checkedPosition = listView.getCheckedItemPosition(); 
-            if (checkedPosition != position) {
-                listView.setItemChecked(position, true);
-            } else {
-                listView.setItemChecked(position, false);
-            }
             Log.d("", String.format("position:%d", listView.getCheckedItemPosition()));
         }
     };
