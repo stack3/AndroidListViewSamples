@@ -2,13 +2,14 @@ package net.stack3.listviewsample;
 
 import java.util.ArrayList;
 
-import net.stack3.listviewsample.choicesingle.ChoiceSingleActivity;
 import net.stack3.listviewsample.customlistitem.CustomListItemActivity;
 import net.stack3.listviewsample.customtext.CustomTextActivity;
 import net.stack3.listviewsample.highlight.HighlightActivity;
+import net.stack3.listviewsample.multiplechoice.MultipleChoiceActivity;
 import net.stack3.listviewsample.multipletype.MultipleTypeActivity;
 import net.stack3.listviewsample.simplelistactivity.SimpleListActivity;
 import net.stack3.listviewsample.simplelistview.SimpleListViewActivity;
+import net.stack3.listviewsample.singlechoice.SingleChoiceActivity;
 
 import android.os.Bundle;
 import android.app.ListActivity;
@@ -55,10 +56,15 @@ public class MainActivity extends ListActivity {
         items.add(item);
         
         item = new MenuItem();
-        item.setTitle("ChoiceSingle");
-        item.setActivityClass(ChoiceSingleActivity.class);
+        item.setTitle("SingleChoice");
+        item.setActivityClass(SingleChoiceActivity.class);
         items.add(item);
         
+        item = new MenuItem();
+        item.setTitle("MultipleChoice");
+        item.setActivityClass(MultipleChoiceActivity.class);
+        items.add(item);
+
         item = new MenuItem();
         item.setTitle("Highlight");
         item.setActivityClass(HighlightActivity.class);

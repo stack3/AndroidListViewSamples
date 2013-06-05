@@ -1,4 +1,4 @@
-package net.stack3.listviewsample.choicesingle;
+package net.stack3.listviewsample.singlechoice;
 
 import java.util.ArrayList;
 
@@ -14,13 +14,13 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class ChoiceSingleActivity extends Activity {
+public class SingleChoiceActivity extends Activity {
     private ArrayAdapter<String> adapter;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.choice_single_activity);
+        setContentView(R.layout.single_choice_activity);
         setTitle("ChoiceSingle");
         
         ArrayList<String> items = new ArrayList<String>();
