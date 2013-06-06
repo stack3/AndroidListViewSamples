@@ -25,15 +25,14 @@ public class MultipleChoiceActivity extends Activity {
         setTitle("MultipleChoice");
         
         ArrayList<String> items = new ArrayList<String>();
-        items.add("Item 1");
-        items.add("Item 2");
-        items.add("Item 3");
+        for (int i = 0; i < 30; i++) {
+            items.add(String.format("Item %d", i));
+        }
         
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, items);
         
         ListView listView = (ListView)findViewById(R.id.listView);
         listView.setAdapter(adapter);
-        listView.setItemChecked(0, true);
         listView.setOnItemClickListener(listViewOnItemClickListener);
         
         Button infoButton = (Button)findViewById(R.id.infoButton);
@@ -43,7 +42,9 @@ public class MultipleChoiceActivity extends Activity {
     private OnItemClickListener listViewOnItemClickListener = new OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-            Log.d("", String.format("Checked position:%d", position));
+            ListView listView = (ListView)adapterView;
+            SparseBooleanArray checkedItemPositions = listView.getCheckedItemPositions();
+            Log.d("", String.format("position:%d checked:%b", position, checkedItemPositions.get(position)));
         }
     };
     
@@ -52,9 +53,18 @@ public class MultipleChoiceActivity extends Activity {
         public void onClick(View v) {
             ListView listView = (ListView)findViewById(R.id.listView);
             SparseBooleanArray checkedItemPositions = listView.getCheckedItemPositions();
+            StringBuilder sb = new StringBuilder();
             for (int i = 0; i < checkedItemPositions.size(); i++) {
-                Log.d("", String.format("Checked position:%d %b", i, checkedItemPositions.valueAt(i)));
+                int itemIndex = checkedItemPositions.keyAt(i);
+                sb.append(String.format("index:%d value:%b\n", itemIndex, checkedItemPositions.get(itemIndex)));
             }
+            Log.d("", sb.toString());
+            Log.d("", "---");
+            sb.setLength(0);
+            for (int position = 0; position < adapter.getCount(); position++) {
+                sb.append(String.format("position:%d checked:%b\n", position, checkedItemPositions.get(position)));
+            }
+            Log.d("", sb.toString());
         }
     };
 }

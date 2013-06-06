@@ -44,9 +44,6 @@ public class HighlightActivity extends Activity {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
             adapter.notifyDataSetChanged();
-            
-            ListView listView = (ListView)findViewById(R.id.listView);
-            Log.d("", String.format("position:%d", listView.getCheckedItemPosition()));
         }
     };
     
